@@ -94,7 +94,7 @@ Phase | Duration | Key Deliverables | Exit Criteria
 4. Images & Template | 0.5-1 week | Unsplash service, attribution handling, MJML template + renderer, HTML tests | Rendered HTML passes MJML validation and looks correct in preview.
 5. Mailjet Integration | 0.5 week | Draft/create/test/send endpoints, status tracking | Able to create draft, send test email in sandbox.
 6. Next.js Dashboard | 1 week | Auth, topics page, run history, draft preview/editor, send trigger | User can configure topics and approve/send generated draft.
-7. Hardening & Launch | 1 week | End-to-end tests, logging/alerts, runbook, docs, training | Two consecutive successful dry-runs; stakeholders sign-off.
+7. Hardening & Launch | 1 week | End-to-end tests, logging/alerts, runbook, production-ready README, docs, training | Two consecutive successful dry-runs; stakeholders sign-off and README validated against deployment steps.
 
 ## 6. Test Strategy
 - **Unit**: parsers, dedupe, prompt builders, Unsplash/Mailjet client wrappers (use VCR-style fixtures).
