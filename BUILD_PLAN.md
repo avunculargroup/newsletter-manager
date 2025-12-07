@@ -1,13 +1,13 @@
 # Build Plan: Automated Newsletter Generation Platform
 
-## 1. Desired Outcome & Guardrails
+-## 1. Desired Outcome & Guardrails
 - **Goal**: A weekly automation that ingests curated sources, drafts a polished MJML/Mailjet newsletter, and lets the user review/send via a Next.js UI without manual copy/paste.
 - **Success criteria**:
   - Newsletter draft (text + images) generated end-to-end in <5 minutes for a typical topic set.
   - Mailjet campaign draft created automatically with zero manual HTML edits.
   - User can adjust topics, review/edit copy, preview final HTML, and trigger/send or schedule.
   - Pipeline reliability ≥ 95% over 8 consecutive weekly runs.
-- **Guardrails**: respect Unsplash attribution, store secrets in environment/key vault, keep subscriber data only inside Mailjet/Supabase, design services so future workflows can reuse components.
+- **Guardrails**: respect Unsplash attribution, store secrets in environment/key vault, keep subscriber data only inside Mailjet/Supabase, design services so future workflows can reuse components, and keep all project code rooted directly in the repository root (no extra nested app directories).
 
 ## 2. Scope Summary (MVP)
 1. Source discovery via NewsAPI/RSS plus Firecrawl MCP scraping/search.
