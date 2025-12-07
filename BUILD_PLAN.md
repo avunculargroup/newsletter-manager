@@ -119,12 +119,12 @@ Image licensing | Enforce Unsplash attribution in template, log attribution meta
 Security/compliance | Store subscriber data only in Mailjet/Supabase with RLS, audit secrets, ensure unsubscribe links present.
 Schedule drift | Scheduler health checks, watchdog alert if run doesn’t complete within SLA.
 
-## 9. Open Questions / Decisions Needed
-1. Preferred hosting stack (single VM vs. container platform vs. serverless) for FastAPI + workers?
-2. Do we need multi-user roles in the dashboard now or later?
-3. Unsplash-only acceptable for MVP, or should we budget time for generative image fallback?
-4. Notification channel preference for pipeline success/failure (email, Slack, SMS)?
-5. Any legal review needed before auto-sending (e.g., additional approvals)?
+## 9. Decisions / Clarifications
+1. **Hosting**: Deploy Next.js frontend to Vercel; run FastAPI + workers on Render (separate services).
+2. **User roles**: Single role for MVP; multi-user role management deferred.
+3. **Images**: Unsplash remains primary, but add optional manual image upload support in the dashboard.
+4. **Notifications**: Email alerts only; recipient configured via `.env`.
+5. **Approvals**: No additional approval workflow beyond existing manual review in UI.
 
 ---
 _This document is the planning blueprint; no implementation work has been started._
